@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "413184368436",
+    "project_id": "paints-62ed7",
+    "storage_bucket": "paints-62ed7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413184368436:android:53ba0dcf116cf35a488f61",
+        "android_client_info": {
+          "package_name": "com.one.hello_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413184368436-t292tdq8ma3d6kvnta511d2062f4s80t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.one.hello_flutter",
+            "certificate_hash": "3f64b2a106475170c91c74837eb1efb6e07fbf08"
+          }
+        },
+        {
+          "client_id": "413184368436-qatrfgatpqs721ctb5uk3q1ierjik828.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS52xNFDMTj0meoE_oYDhZSP9H1CjKLWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413184368436-qatrfgatpqs721ctb5uk3q1ierjik828.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
