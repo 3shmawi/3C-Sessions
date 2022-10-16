@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-class LayoutScreen extends StatelessWidget {
+class LayoutScreen extends StatefulWidget {
   const LayoutScreen({Key? key}) : super(key: key);
+
+  @override
+  State<LayoutScreen> createState() => _LayoutScreenState();
+}
+
+class _LayoutScreenState extends State<LayoutScreen> {
+  int abdulrhanCounter = 1;
+  int ahmedCounter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -18,85 +26,95 @@ class LayoutScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              children: const [
-                Text(
-                  'Abdura7man',
-                  style: TextStyle(
-                    fontSize: 25,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    setState(() {
+                      abdulrhanCounter++;
+                    });
+                  },
+                  child: const Text(
+                    'Abdura7man',
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
                   ),
                 ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
-                ), Icon(
-                  Icons.star,
-                  color: Colors.yellow,
+
+                Text(
+                  '   $abdulrhanCounter',
+                  style: const TextStyle(
+                    fontSize: 30,
+                  ),
                 ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
-                ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
-                ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
-                ), Icon(
-                  Icons.star,
-                  color: Colors.yellow,
+                Expanded(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: List.generate(
+                        abdulrhanCounter,
+                            (index) =>  Text('$index'),
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
             Row(
-              children: const [
-                Text(
-                  'Ahmed',
-                  style: TextStyle(
-                    fontSize: 25,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    setState(() {
+                      ahmedCounter++;
+                    });
+                  },
+                  child: const Text(
+                    'Ahmed',
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
                   ),
                 ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
+                Text(
+                  '   $ahmedCounter',
+                  style: const TextStyle(
+                    fontSize: 30,
+                  ),
                 ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
-                ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
-                ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
-                ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
-                ),
-                Icon(
-                  Icons.star,
-                  color: Colors.yellow,
+                Expanded(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: List.generate(
+                        ahmedCounter,
+                        (index) => const Icon(
+                          Icons.star,
+                          color: Colors.yellow,
+                          size: 50,
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
-            const Text(
-              '😂',
-              style: TextStyle(fontSize: 50),
-            ),
-            const CircleAvatar(
-              backgroundColor: Colors.blue,
-              radius: 200,
-              child: CircleAvatar(
-                radius: 150,
-                backgroundImage: NetworkImage(
-                    'https://avatars.githubusercontent.com/u/100779215?v=4'),
+
+
+            Expanded(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: List.generate(
+                    abdulrhanCounter,
+                        (index) => const Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 50,
+                    ),
+                  ),
+                ),
               ),
             ),
-
           ],
         ),
       ),
