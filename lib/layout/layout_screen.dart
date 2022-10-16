@@ -9,7 +9,7 @@ class LayoutScreen extends StatefulWidget {
 }
 
 class _LayoutScreenState extends State<LayoutScreen> {
-  int abdulrhanCounter = 1;
+  int abdulrhmanCounter = 1;
   int ahmedCounter = 1;
 
   @override
@@ -30,7 +30,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                 TextButton(
                   onPressed: () {
                     setState(() {
-                      abdulrhanCounter++;
+                      abdulrhmanCounter++;
                     });
                   },
                   child: const Text(
@@ -42,7 +42,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                 ),
 
                 Text(
-                  '   $abdulrhanCounter',
+                  '   $abdulrhmanCounter',
                   style: const TextStyle(
                     fontSize: 30,
                   ),
@@ -52,7 +52,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: List.generate(
-                        abdulrhanCounter,
+                        abdulrhmanCounter,
                             (index) =>  Text('$index'),
                       ),
                     ),
@@ -105,7 +105,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                 scrollDirection: Axis.vertical,
                 child: Column(
                   children: List.generate(
-                    abdulrhanCounter,
+                    abdulrhmanCounter,
                         (index) => const Icon(
                       Icons.star,
                       color: Colors.yellow,
