@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-import 'layout/layout_screen.dart';
+import 'layout_g_one/layout_screen_g_one.dart';
+import 'layout_g_two/layout_screen_g_two.dart';
+
+
 
 void main() {
 
@@ -23,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LayoutScreen(),
+      home: const LayoutScreenGroupTwo(),
     );
   }
 }

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-class LayoutScreen extends StatefulWidget {
-  const LayoutScreen({Key? key}) : super(key: key);
+class LayoutScreenGroupOne extends StatefulWidget {
+  const LayoutScreenGroupOne({Key? key}) : super(key: key);
 
   @override
-  State<LayoutScreen> createState() => _LayoutScreenState();
+  State<LayoutScreenGroupOne> createState() => _LayoutScreenGroupOneState();
 }
 
-class _LayoutScreenState extends State<LayoutScreen> {
+class _LayoutScreenGroupOneState extends State<LayoutScreenGroupOne> {
   int abdulrhmanCounter = 1;
   int ahmedCounter = 1;
 
