@@ -7,106 +7,150 @@ class LayoutScreenGroupTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FlutterNativeSplash.remove();
-    int count = 5;
+
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.lightBlueAccent,
-        elevation: 50,
-        leading: const Icon(Icons.menu),
-        centerTitle: true,
-        title: const Text(
-          'Welcome at 3C',
-        ),
-        actions: const [
-          Icon(Icons.search),
-        ],
-      ),
-      body: SingleChildScrollView(
+      appBar: AppBar(title: const Text('Session 2'), centerTitle: true),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Column(
           children: [
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 150,
-                    width: 50,
-                    color: Colors.red,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                child: Container(
+                  height: 300,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.teal[100],
+                    borderRadius: const BorderRadius.only(
+                      bottomRight: Radius.circular(15),
+                      bottomLeft: Radius.circular(15),
+                    ),
                   ),
-                  const SizedBox(
-                    width: 50,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: defaultText('Input'),
+                      ),
+                      const Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Container(
+                          color: Colors.black,
+                          height: 1.5,
+                          width: double.infinity,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 20.0, left: 20),
+                        child: defaultText('Result'),
+                      ),
+                    ],
                   ),
-                  Container(
-                    height: 200,
-                    width: 100,
-                    color: Colors.blue,
-                  ),
-                  const SizedBox(
-                    width: 50,
-                  ),
-                  Container(
-                    height: 200,
-                    width: 100,
-                    color: Colors.blue,
-                  ),
-                  const SizedBox(
-                    width: 50,
-                  ),
-                  Container(
-                    height: 200,
-                    width: 510,
-                    color: Colors.blue,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Container(
-              height: 200,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: const Center(
-                child: Text(
-                  'I\'m Box',
-                  style: TextStyle(color: Colors.white),
                 ),
               ),
             ),
-            Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.white,
+            row('AC', 'DC', '%', '/'),
+            const SizedBox(
+              height: 8,
             ),
-            Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.black,
+            row('7', '8', '9', 'x'),
+            const SizedBox(
+              height: 8,
             ),
-            Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.white,
+            row('4', '5', '6', '-'),
+            const SizedBox(
+              height: 8,
             ),
-            Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.black,
+            row('1', '2', '3', '+'),
+            const SizedBox(
+              height: 8,
             ),
-            Container(
-              height: 200,
-              width: double.infinity,
-              color: Colors.white,
+            row('0', '.', 'd', '='),
+            const SizedBox(
+              height: 20,
             ),
           ],
         ),
       ),
     );
   }
+
+//return type      name        parameter        body     =>
+  Row row(String bt1, String bt2, String bt3, String bt4) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Expanded(
+          child: Container(
+            padding:
+                const EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
+            decoration: BoxDecoration(
+              color: Colors.grey[400],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: defaultText(bt1),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: Container(
+            padding:
+                const EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
+            decoration: BoxDecoration(
+              color: Colors.grey[400],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: defaultText(bt2),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: Container(
+            padding:
+                const EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
+            decoration: BoxDecoration(
+              color: Colors.grey[400],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: defaultText(bt3),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: Container(
+            padding:
+                const EdgeInsets.only(right: 20, left: 20, top: 10, bottom: 10),
+            decoration: BoxDecoration(
+              color: Colors.grey[400],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: defaultText(bt4),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget defaultText(String text) => InkWell(
+    child: Center(
+      child: Text(
+            text,
+            style: const TextStyle(
+              color: Colors.blue,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+    ),
+  );
 }
