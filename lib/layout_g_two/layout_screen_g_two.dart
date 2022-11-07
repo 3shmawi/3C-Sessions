@@ -21,11 +21,8 @@ class LayoutScreenGroupTwo extends StatelessWidget {
                   height: 300,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.teal[100],
-                    borderRadius: const BorderRadius.only(
-                      bottomRight: Radius.circular(15),
-                      bottomLeft: Radius.circular(15),
-                    ),
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +35,7 @@ class LayoutScreenGroupTwo extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Container(
-                          color: Colors.black,
+                          color: Colors.white,
                           height: 1.5,
                           width: double.infinity,
                         ),
@@ -141,16 +138,14 @@ class LayoutScreenGroupTwo extends StatelessWidget {
     );
   }
 
-  Widget defaultText(String text) => InkWell(
-    child: Center(
-      child: Text(
-            text,
-            style: const TextStyle(
-              color: Colors.blue,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+  Widget defaultText(String text) => Center(
+    child: Text(
+      text,
+      style: const TextStyle(
+        color: Colors.blue,
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+      ),
     ),
   );
 }

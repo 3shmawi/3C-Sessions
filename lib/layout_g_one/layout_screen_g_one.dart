@@ -101,11 +101,9 @@ class _LayoutScreenGroupOneState extends State<LayoutScreenGroupOne> {
                 ),
               ],
             ),
-
             Expanded(
               child: Container(
                 width: double.infinity,
-
                 decoration: BoxDecoration(
                   color: Colors.red,
                   borderRadius: BorderRadius.circular(15),
