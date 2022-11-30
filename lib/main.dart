@@ -1,38 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/screens/bmi/bmi_screen.dart';
+import 'package:hello_flutter/screens/review.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-//StatelessWidget
-
-//StatefulWidget
-
-//main
-//runApp
-//MaterialApp
-//Scaffold
-
-//Text
-//Icon
-//AppBar
-//SafeArea
-//IconButton
-//Center
-
 class MyApp extends StatelessWidget {
-  @override
   Widget build(context) {
     return MaterialApp(
-      home: SafeArea(
-        child: Scaffold(
-          body: Icon(
-            Icons.cabin,
-            size: 50,
-            color: Colors.deepOrange,
-          ),
-        ),
-      ),
+      home: BMICalculator(),
     );
   }
 }

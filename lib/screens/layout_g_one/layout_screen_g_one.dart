@@ -106,7 +106,15 @@ class _LayoutScreenGroupOneState extends State<LayoutScreenGroupOne> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.red,
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Center(
+                  child: Text(
+                    'This is Egypt',
+                    style: TextStyle(
+                      fontSize: 25
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -117,7 +125,7 @@ class _LayoutScreenGroupOneState extends State<LayoutScreenGroupOne> {
                 child: const Icon(
                   Icons.flutter_dash,
                   size: 50,
-                  color: Colors.yellow,
+                  color: Colors.blue,
                 ),
               ),
             ),

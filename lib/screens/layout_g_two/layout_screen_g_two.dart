@@ -9,7 +9,17 @@ class LayoutScreenGroupTwo extends StatelessWidget {
     FlutterNativeSplash.remove();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Session 2'), centerTitle: true),
+      appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
+            ),
+          ),
+          title: const Text('Session 2'),
+          centerTitle: true),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Column(
@@ -139,13 +149,13 @@ class LayoutScreenGroupTwo extends StatelessWidget {
   }
 
   Widget defaultText(String text) => Center(
-    child: Text(
-      text,
-      style: const TextStyle(
-        color: Colors.blue,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-  );
+        child: Text(
+          text,
+          style: const TextStyle(
+            color: Colors.blue,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      );
 }
