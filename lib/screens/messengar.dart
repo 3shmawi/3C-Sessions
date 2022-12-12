@@ -224,7 +224,7 @@ class MessageScreen extends StatelessWidget {
                                       children: [
                                         Expanded(
                                           child: Text(
-                                            'Hello i\'m Mohamed kjlfaksdflkajslfkjalllk lklasjdlfk laksdjlfklasdfjl lkjsdflakjs a',
+                                            'Hello i\'m Mohamed ',
                                             maxLines: 1,
                                             overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
