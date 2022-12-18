@@ -5,6 +5,8 @@ import 'package:hello_flutter/screens/login.dart';
 import 'package:hello_flutter/screens/messengar.dart';
 import 'package:hello_flutter/screens/review.dart';
 
+import 'exam.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple
       ),
-      home:  LoginScreen(),
+      home:  const BMICalculatorPage(),
     );
   }
 }
